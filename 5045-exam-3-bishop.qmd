@@ -1,0 +1,97 @@
+---
+title: "STAT 5045 Exam 3"
+author: "Tripp Bishop/STAT 5045"
+date: "November 22, 2024"
+date-format: "long"
+format: pdf
+margin: 2.54
+fig-align: "center"
+execute: 
+  warning: false
+  message: false
+header-includes:
+  \usepackage{amsmath}
+---
+
+```{r setup}
+library(tidyverse)
+library(kableExtra)
+
+# clear out the environment
+rm(list = ls())
+
+# set all plots to use a customised version of the minimal theme.
+base_plot <- theme_minimal() +
+  theme(
+    plot.title.position = "plot",
+    plot.title = element_text(size=12),
+    axis.title.x = element_text(size=10),
+    axis.title.y = element_text(size=10),
+    axis.text.x = element_text(size=8),
+    axis.text.y = element_text(size=8)
+  )
+
+# now all plots will render with the same basic settings.
+theme_set(base_plot)
+
+```
+
+## Question 1
+A study in Florida was done to determine the primary food choice of alligators. 
+The primary choices were `Fish`, `Invertebrate`, `Reptile`, `Bird`, `Other`. The 
+lake location and the size (longer or shorter than 2.3 metres) of the alligator 
+was also recorded. The data can be obtained from the `MLGdata` package in R. Use 
+`Fish` as the reference for `foodchoice`. Use `George` as the reference for 
+`lake`. Use $<= 2.3$ as the reference for `size`. $\alpha=0.05$.
+
+(a) Provide the model with an interaction. Explain all of the terms and 
+subscripts.
+
+
+
+(b) Fit the model and test the interaction. Interpret the test result.
+
+
+
+(c) Based on the results of part (b) select a final model. Provide any required
+additional test for the final model and interpret each test.
+
+
+
+(d) Completely interpret a change in the size of an alligator using your final 
+model.
+
+
+## Question 2
+
+
+
+
+
+## Question 3
+
+
+
+
+## Question 4
+
+
+
+
+
+## Question 5
+
+
+
+
+
+## Question 6
+
+
+
+
+## Bonus Question
+
+
+
+
