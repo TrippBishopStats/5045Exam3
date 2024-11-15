@@ -198,7 +198,7 @@ gators <- read_csv("allg8rLength.csv")
 glimpse(gators)
 gators <- gators |> 
   mutate(
-    foodChoice  = as_factor(foodChoice),
+    foodChoice  = fct_relevel(as_factor(foodChoice), "Fish", after = 0),
     sex = fct_recode(as_factor(sex),
                      "Male" = "M",
                      "Female" = "F")
@@ -215,7 +215,7 @@ levels(gators$foodChoice)
 and the estimated regression model.
 
 ```{r question 4a}
-fdfd
+
 ```
 
 
