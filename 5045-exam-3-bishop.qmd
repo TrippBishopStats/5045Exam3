@@ -139,24 +139,74 @@ the odds with a CI. Interpret both the estimate and the CI.
 
 
 ## Question 4
+A study in Florida was done to determine the primary food choice of alligators.
+The data in the file `allg8rLength.csv` contains the alligators only from Lake
+George. The primary food choices are `Invertebrates`, `Fish`, and `Other`. The
+length of the alligators is given in metres. Use `Fish` as the reference for
+`foodchoice`.
+
+(a) Fit a model with `length`, `sex`, and the interaction. Provide the R code 
+and the estimated regression model.
+
+```{r question 4a}
+
+```
 
 
+(b) Test the interaction and provide the interpretation of the test.
 
+```{r question 4b}
+
+```
+
+(c) Based on the results of the test of the interaction in part (b), select a 
+final model. Provide the R code showing the final model and estimated 
+coefficients. Using the estimated coefficients, fully interpret your final 
+model. If length is in your final model, use a 1 decimetre (0.1 metre) increase
+for the interpretation.
+
+```{r question 4c}
+
+```
 
 
 ## Question 5
-
-
-
+Using the ant study of problem (2), compare the conclusions of parts (b) and 
+(c). If the conclusions are the same, explain why. If the conclusions are
+different, explain why. Do NOT repeat the conclusions, just explain why they are
+similar or different.
 
 
 ## Question 6
+Use the `wheat.csv` data to fit both nominal response and proportional odds
+regression models to predict wheat kernel health. Both models should use the
+variables `class`, `density`, `hardness`, `size`, `weight`, and `moisture`
+*without interaction* to predict health status. The proportional odds model
+should order then health status responses as `Scab`<`Sprout`<`Healthy`. Do not 
+show the models you obtain, but show your code.
 
+Now, consider the accuracy of these models. How well do each of these models
+predict the different health statuses when compared to the actual status
+reported in the data. For example, perhaps the proportional odds model correctly 
+classified 80% of the Healthy wheat kernels. Report the overall accuracy for 
+each health level. results should be reported in an easy to ready table with a 
+clear description of the table contents.
 
+One is clearly more accurate than the other, both overall and per health level.
+Please give your understanding of why this is the case and provide at least one 
+reason someone might want to use the less accurate model.
+
+```{r question 6}
+
+```
 
 
 ## Bonus Question
-
+Using the alligator data from question 4 (`allg8rLength.csv`), produce a
+probability plot based on the nominal response regression model in which the 
+variable `length` only is used to predict food choice. Describe what this plot 
+suggests about alligator length and food choice. Would a proportional odds model
+be a good choice for this data? Why or why not?
 
 ```{r bonus question}
 
