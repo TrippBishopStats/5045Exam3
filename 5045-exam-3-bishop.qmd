@@ -44,13 +44,32 @@ was also recorded. The data can be obtained from the `MLGdata` package in R. Use
 `Fish` as the reference for `foodchoice`. Use `George` as the reference for 
 `lake`. Use $<= 2.3$ as the reference for `size`. $\alpha=0.05$.
 
+```{r question 1}
+gators <- MLGdata::Alligators
+
+glimpse(gators)
+levels(gators$foodchoice)
+gators$foodchoice <- relevel(gators$foodchoice, ref = "Fish")
+```
+
+
 (a) Provide the model with an interaction. Explain all of the terms and 
 subscripts.
+
+
+$$
+\begin{aligned}
+
+\end{aligned}
+$$
 
 
 
 (b) Fit the model and test the interaction. Interpret the test result.
 
+```{r question 1b}
+
+```
 
 
 (c) Based on the results of part (b) select a final model. Provide any required
@@ -79,7 +98,27 @@ The variables in the data are:
 with the appropriate labels. Provide your R code.
 
 ```{r question 2a}
+ants <- MLGdata::Ants
 
+glimpse(ants)
+
+ants <- ants |> 
+  mutate(
+    Bread = fct_recode(as_factor(Bread), 
+                       "rye"="1", 
+                       "wheatmeal"="2", 
+                       "multigrain"="3",
+                       "white"="4"),
+    Filling = fct_recode(as_factor(Filling),
+                         "Vegemite" = "1",
+                         "peanut butter" = "2",
+                         "ham and pickles" = "3"),
+    Butter = fct_recode(as_factor(Butter),
+                        "yes" = "1",
+                        "no" = "-1")
+  )
+
+str(ants)
 ```
 
 (b) Use the `xtabs` function to create a table of ant counts by `Bread` and 
@@ -87,7 +126,7 @@ with the appropriate labels. Provide your R code.
 `Bread` and `Filling`. Interpret the test result.
 
 ```{r question 2 part b}
-
+xtabs(Ant_count ~ Bread + Filling, data = ants)
 ```
 
 (c) Use the `xtabs` function to create a table of ant counts by `Bread` and 
@@ -95,7 +134,7 @@ with the appropriate labels. Provide your R code.
 `no Butter` and another table of `Bread` by `Filling` for `yes Butter`.
 
 ```{r question 2 part c}
-
+xtabs(Ant_count ~ Bread + Filling + Butter, data = ants)
 ```
 
 (i) For the `no Butter` table, test the association between `Bread` and 
@@ -115,6 +154,15 @@ The variables in the data are:
 - **num** *number of beetles exposed*
 - **uccisi** *number of beetles that died*
 _ **logdose** *concentration of carbon disulphide (mg per litre) in logarithmic scale*.
+
+
+```{r question 3}
+beetles <- MLGdata::Beetles
+glimpse(beetles)
+```
+
+
+
 
 (a) Fit a model with `logdose` as the predictor. Provide the R code and the 
 estimated regression model.
@@ -145,11 +193,29 @@ George. The primary food choices are `Invertebrates`, `Fish`, and `Other`. The
 length of the alligators is given in metres. Use `Fish` as the reference for
 `foodchoice`.
 
+```{r question 4}
+gators <- read_csv("allg8rLength.csv")
+glimpse(gators)
+gators <- gators |> 
+  mutate(
+    foodChoice  = as_factor(foodChoice),
+    sex = fct_recode(as_factor(sex),
+                     "Male" = "M",
+                     "Female" = "F")
+  )
+
+levels(gators$foodChoice)
+
+```
+
+
+
+
 (a) Fit a model with `length`, `sex`, and the interaction. Provide the R code 
 and the estimated regression model.
 
 ```{r question 4a}
-
+fdfd
 ```
 
 
