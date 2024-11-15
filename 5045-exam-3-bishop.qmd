@@ -63,14 +63,79 @@ model.
 
 
 ## Question 2
+Students from an Australian university conducted an experiment to determine
+which type of sandwich attracts the most ants. The data can be obtained from the
+`MGLdata` package in R.
 
+The variables in the data are:
 
+- **Bread** *1 = rye, 2 = wheatmeal, 3 = multigrain, 4 = white*
+- **Filling** *1 = Vegemite, 2 = peanut butter, 3 = ham and pickles*
+- **Butter** *1 = yes, 2 = no*
+- **Ant_count** *number of captured ants*
+- **Order** *order of the experiment*
 
+(a) Read in the data. Change the categorical variables from numeric to factor
+with the appropriate labels. Provide your R code.
+
+```{r question 2a}
+
+```
+
+(b) Use the `xtabs` function to create a table of ant counts by `Bread` and 
+`Filling`, ignore `Butter`. Provide the table. Test for an association between
+`Bread` and `Filling`. Interpret the test result.
+
+```{r question 2 part b}
+
+```
+
+(c) Use the `xtabs` function to create a table of ant counts by `Bread` and 
+`Filling` and by `Butter`. You should have a table of `Bread` by `Filling` for 
+`no Butter` and another table of `Bread` by `Filling` for `yes Butter`.
+
+```{r question 2 part c}
+
+```
+
+(i) For the `no Butter` table, test the association between `Bread` and 
+`Filling`. Interpret the test result.
+
+(ii) For the `yes Butter` table, test the association between `Bread` and 
+`Filling`. Interpret the test result.
 
 
 ## Question 3
+A study was done to determine the lethality of gaseous carbon disulphide on
+adult flour beetles. The beetles were exposed for 5 hours at different dosage
+levels. The data can be obtained from the MLGdata package in R. $\alpha = 0.1$.
 
+The variables in the data are:
 
+- **num** *number of beetles exposed*
+- **uccisi** *number of beetles that died*
+_ **logdose** *concentration of carbon disulphide (mg per litre) in logarithmic scale*.
+
+(a) Fit a model with `logdose` as the predictor. Provide the R code and the 
+estimated regression model.
+
+```{r question 3a}
+
+```
+
+(b) Provide R code and result for the test of including `logdose` in the model
+or not. Interpret the test results.
+
+```{r question 3 part b}
+
+```
+
+(c) For a 0.01 increase in the `logdose`, provide an estimate in the change of 
+the odds with a CI. Interpret both the estimate and the CI.
+
+```{r question 3 part c}
+
+```
 
 
 ## Question 4
@@ -93,5 +158,8 @@ model.
 ## Bonus Question
 
 
+```{r bonus question}
+
+```
 
 
